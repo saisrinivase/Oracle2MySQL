@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pre-Migration Readiness (Sample)</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+.pass { color: #166534; font-weight: 700; }
+.warn { color: #b45309; font-weight: 700; }
+.fail { color: #b91c1c; font-weight: 700; }
+a { color: #0f4c81; text-decoration: none; }
+</style>
+</head>
+<body>
+<h1>Pre-Migration Readiness (Sample)</h1>
+<p><a href="source_intelligence.html">Back to Source Intelligence</a></p>
+<div class="card">
+<table>
+<tr><th>Check</th><th>Status</th><th>Action</th></tr>
+<tr><td>Schema visibility</td><td><span class="pass">PASS</span></td><td>Proceed</td></tr>
+<tr><td>Cross-schema dependencies</td><td><span class="warn">WARN</span></td><td>Owner alignment needed</td></tr>
+<tr><td>Legacy datatypes</td><td><span class="fail">FAIL</span></td><td>Patch before conversion</td></tr>
+</table>
+</div>
+</body>
+</html>

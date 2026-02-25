@@ -33,3 +33,12 @@ Example:
 ## Important
 - `REPORT_DIR` must be `/tmp/oracle_source_intel` or a child path.
 - Script is read-only (`SELECT` + `SPOOL` only).
+
+## Sample Reports (In Git)
+Open this file for a quick preview:
+- `oracle_mysql_migration_planning/sql_readonly/samples/final_preview/source_intelligence.html`
+
+Included sample pages:
+- `pre_migration_readiness.html`
+- `sct_conversion_guide.html`
+- `datatype_mapping_backlog.html`
