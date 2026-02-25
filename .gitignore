@@ -6,13 +6,3 @@
 *~
 .idea/
 .vscode/
-
-# SQL execution artifacts
-*.log
-*.out
-*.lst
-
-# Local generated report staging (if used inside repo)
-oracle_mysql_migration_planning/sql_readonly/output/
-oracle_mysql_migration_planning/sql_readonly/generated/
-oracle_mysql_migration_planning/sql_readonly/runtime/
