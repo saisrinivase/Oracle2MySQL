@@ -3,7 +3,10 @@
 This package generates Oracle source discovery and assessment HTML reports without changing schema objects or table data.
 
 Detailed execution runbook:
-- `/Users/saiendla/Desktop/OracletoMySQL/oracle_mysql_migration_planning/sql_readonly/RUNBOOK.md`
+- `RUNBOOK.md`
+
+Audience:
+- Any engineer/DBA using SQL Developer with Oracle metadata access.
 
 ## Safety Guarantees
 - No `CREATE`
@@ -25,11 +28,11 @@ All versions are `SELECT` + `SPOOL` only.
   - Includes SCT decisioning and datatype refactor backlog outputs.
 
 ## Run from SQL Developer (Single Script)
-1. Open SQL Worksheet.
-2. Set script path:
-   `/Users/saiendla/Desktop/OracletoMySQL/oracle_mysql_migration_planning/sql_readonly`
+1. Open SQL Worksheet connected to source Oracle.
+2. Set script path to this folder:
+   - `<repo_root>/oracle_mysql_migration_planning/sql_readonly`
 3. Ensure output folder exists under allowed base path (default allowlist: `/tmp/oracle_source_intel`).
-4. Run with `F5`:
+4. Run with `F5` (Run Script):
 
 ```sql
 @run_source_intelligence_single_script_v2_enterprise.sql YOUR_SCHEMA /tmp/oracle_source_intel 19c 8 350 40
@@ -90,7 +93,7 @@ These reports are for pre-migration planning and remediation prioritization.
 ## Sample Reports (No Oracle Needed)
 Sample HTML output bundle is available at:
 
-- `/Users/saiendla/Desktop/OracletoMySQL/oracle_mysql_migration_planning/sql_readonly/samples/v2_enterprise_poc/source_intelligence.html`
+- `<repo_root>/oracle_mysql_migration_planning/sql_readonly/samples/v2_enterprise_poc/source_intelligence.html`
 
 From that page, open linked sample pages for all report types:
 - discovery summary

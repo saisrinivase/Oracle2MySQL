@@ -2,6 +2,20 @@
 
 This runbook is for executing the read-only Oracle source intelligence workflow and generating enterprise-grade HTML reports.
 
+## Who Can Run This
+Any team member can run this if they have:
+- Oracle SQL Developer
+- Access to Oracle source schema metadata
+- Local clone of this repository
+
+## Pre-Checks
+1. Confirm repository location (`<repo_root>`).
+2. Confirm script exists:
+   - `<repo_root>/oracle_mysql_migration_planning/sql_readonly/run_source_intelligence_single_script_v2_enterprise.sql`
+3. Confirm output base path exists or create it:
+   - `/tmp/oracle_source_intel`
+4. Confirm Oracle privileges include dictionary/metadata visibility for target schema.
+
 ## Inputs You Must Provide
 - `SCHEMA_FILTER` (example: `HR`, `APP_%`)
 - `REPORT_DIR` (must be `/tmp/oracle_source_intel` or child path)
@@ -18,24 +32,40 @@ chmod 700 /tmp/oracle_source_intel
 chmod 700 /tmp/oracle_source_intel/poc_hr
 ```
 
-2. Open SQL Developer worksheet connected to source Oracle.
+2. Open SQL Developer and connect to source Oracle.
 
-3. Run:
+3. Open SQL Worksheet.
+
+4. Set worksheet/script working directory to:
+- `<repo_root>/oracle_mysql_migration_planning/sql_readonly`
+
+5. Execute with `F5` (Run Script):
 ```sql
 @run_source_intelligence_single_script_v2_enterprise.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
 ```
 
-4. Validate run completion in SQL output:
+6. Validate run completion in SQL output:
 - Confirm all report file paths are printed at the end.
 - Confirm there is no `ORA-20012` (path-allowlist violation).
 
-5. Open the main report:
+7. Open the main report:
 - `/tmp/oracle_source_intel/poc_hr/source_intelligence.html`
 
-6. Open decision reports:
+8. Open decision reports:
 - `/tmp/oracle_source_intel/poc_hr/enterprise_prereq_gate.html`
 - `/tmp/oracle_source_intel/poc_hr/sct_decision_matrix.html`
 - `/tmp/oracle_source_intel/poc_hr/datatype_refactor_backlog.html`
+
+## Copy-Paste Command Templates
+Use specific schema:
+```sql
+@run_source_intelligence_single_script_v2_enterprise.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
+```
+
+Use wildcard schema filter:
+```sql
+@run_source_intelligence_single_script_v2_enterprise.sql APP_% /tmp/oracle_source_intel/app_poc 19c 8 350 40
+```
 
 ## Interpretation Guide
 - `enterprise_prereq_gate.html`:
@@ -63,4 +93,3 @@ For reproducible baseline output:
 ```
 
 Do not edit v1; create new version files for enhancements.
-
