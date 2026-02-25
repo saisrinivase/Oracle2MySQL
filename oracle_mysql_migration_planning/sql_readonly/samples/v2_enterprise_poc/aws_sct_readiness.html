@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AWS SCT Readiness - Sample</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
+.ok { color: #166534; font-weight: 700; }
+.warn { color: #b45309; font-weight: 700; }
+.risk { color: #b91c1c; font-weight: 700; }
+a { color: #0f4c81; text-decoration: none; }
+</style>
+</head>
+<body>
+<h1>AWS SCT Readiness (Sample)</h1>
+<p><a href="source_intelligence.html">Source Intelligence</a></p>
+<div class="card">
+<h2>Key Compatibility Indicators</h2>
+<table>
+<tr><th>Indicator</th><th>Count</th><th>Signal</th></tr>
+<tr><td>Packages/Package Bodies</td><td>48</td><td><span class="risk">REWRITE REQUIRED</span></td></tr>
+<tr><td>Materialized Views</td><td>6</td><td><span class="warn">REDESIGN NEEDED</span></td></tr>
+<tr><td>DB Links</td><td>2</td><td><span class="risk">INTEGRATION REWORK</span></td></tr>
+<tr><td>Legacy Types</td><td>19</td><td><span class="risk">MAPPING HOTSPOT</span></td></tr>
+</table>
+</div>
+</body>
+</html>

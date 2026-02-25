@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Datatype Refactor Backlog - Sample</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; vertical-align: top; }
+.blocker { color: #b91c1c; font-weight: 700; }
+.high { color: #c2410c; font-weight: 700; }
+.medium { color: #b45309; font-weight: 700; }
+a { color: #0f4c81; text-decoration: none; }
+</style>
+</head>
+<body>
+<h1>Datatype Refactor Backlog (Sample)</h1>
+<p><a href="source_intelligence.html">Source Intelligence</a></p>
+<div class="card">
+<h2>Backlog Summary by Risk</h2>
+<table>
+<tr><th>Risk Band</th><th>Column Count</th></tr>
+<tr><td><span class="blocker">BLOCKER</span></td><td>19</td></tr>
+<tr><td><span class="high">HIGH</span></td><td>44</td></tr>
+<tr><td><span class="medium">MEDIUM</span></td><td>138</td></tr>
+</table>
+</div>
+<div class="card">
+<h2>Detailed Backlog (Sample Rows)</h2>
+<table>
+<tr><th>Owner</th><th>Table</th><th>Column</th><th>Oracle Type</th><th>Risk</th><th>Suggested Target</th><th>Guidance</th></tr>
+<tr><td>HR</td><td>DOC_STORE</td><td>DOC_XML</td><td>XMLTYPE</td><td><span class="blocker">BLOCKER</span></td><td>LONGTEXT or JSON</td><td>Refactor XML function usage</td></tr>
+<tr><td>HR</td><td>MEDIA_REF</td><td>FILE_LOC</td><td>BFILE</td><td><span class="blocker">BLOCKER</span></td><td>VARCHAR(1024)</td><td>External object storage redesign</td></tr>
+<tr><td>HR</td><td>INVOICE</td><td>AMOUNT</td><td>NUMBER</td><td><span class="medium">MEDIUM</span></td><td>DECIMAL(18,2)</td><td>Pin precision/scale explicitly</td></tr>
+<tr><td>HR</td><td>SESSION_LOG</td><td>RAW_PAYLOAD</td><td>RAW(512)</td><td><span class="medium">MEDIUM</span></td><td>BLOB</td><td>Review binary access patterns</td></tr>
+</table>
+</div>
+</body>
+</html>
