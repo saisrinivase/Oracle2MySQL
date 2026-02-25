@@ -50,7 +50,7 @@ end;
 whenever sqlerror continue
 
 prompt
-prompt === Oracle Source Intelligence (Read-Only, Single Script, v2 Enterprise) ===
+prompt === Oracle Source Intelligence (Read-Only, Single Script, v2 Final) ===
 prompt SCHEMA_FILTER      = &&SCHEMA_FILTER
 prompt REPORT_DIR         = &&REPORT_DIR
 prompt ALLOWED_REPORT_BASE= &&ALLOWED_REPORT_BASE
@@ -193,9 +193,9 @@ prompt <li><a href="discovery_objects.html">Discovery Object Details</a></li>
 prompt <li><a href="dependency_graph.html">Dependency Graph</a></li>
 prompt <li><a href="schema_complexity.html">Schema Complexity</a></li>
 prompt <li><a href="aws_sct_readiness.html">AWS SCT Readiness</a></li>
-prompt <li><a href="enterprise_prereq_gate.html">Enterprise Prerequisite Gate</a></li>
-prompt <li><a href="sct_decision_matrix.html">SCT Decision Matrix</a></li>
-prompt <li><a href="datatype_refactor_backlog.html">Datatype Refactor Backlog</a></li>
+prompt <li><a href="pre_migration_readiness.html">Pre-Migration Readiness</a></li>
+prompt <li><a href="sct_conversion_guide.html">SCT Conversion Guide</a></li>
+prompt <li><a href="datatype_mapping_backlog.html">Data Type Mapping Backlog</a></li>
 prompt </ul>
 prompt </div>
 
@@ -369,7 +369,7 @@ prompt </style>
 prompt </head>
 prompt <body>
 prompt <h1>Dependency Graph</h1>
-prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="schema_complexity.html">Schema Complexity</a> | <a href="enterprise_prereq_gate.html">Prerequisite Gate</a> | <a href="sct_decision_matrix.html">SCT Decision Matrix</a></div>
+prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="schema_complexity.html">Schema Complexity</a> | <a href="pre_migration_readiness.html">Pre-Migration Readiness</a> | <a href="sct_conversion_guide.html">SCT Conversion Guide</a></div>
 
 prompt <div class="card">
 prompt <h2>Dependency Summary</h2>
@@ -882,14 +882,14 @@ prompt </html>
 spool off
 
 
--- Report 7: enterprise_prereq_gate.html
-spool "&&REPORT_DIR/enterprise_prereq_gate.html"
+-- Report 7: pre_migration_readiness.html
+spool "&&REPORT_DIR/pre_migration_readiness.html"
 
 prompt <!DOCTYPE html>
 prompt <html lang="en">
 prompt <head>
 prompt <meta charset="utf-8">
-prompt <title>Enterprise Pre-Req Gate</title>
+prompt <title>Pre-Migration Readiness</title>
 prompt <style>
 prompt body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
 prompt h1, h2 { margin: 0 0 12px 0; }
@@ -905,8 +905,8 @@ prompt a:hover { text-decoration: underline; }
 prompt </style>
 prompt </head>
 prompt <body>
-prompt <h1>Enterprise Pre-Requisite Gate</h1>
-prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="sct_decision_matrix.html">SCT Decision Matrix</a> | <a href="datatype_refactor_backlog.html">Datatype Refactor Backlog</a></div>
+prompt <h1>Pre-Migration Readiness</h1>
+prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="sct_conversion_guide.html">SCT Conversion Guide</a> | <a href="datatype_mapping_backlog.html">Data Type Mapping Backlog</a></div>
 
 prompt <div class="card">
 prompt <h2>Gate Checks</h2>
@@ -1057,14 +1057,14 @@ prompt </html>
 spool off
 
 
--- Report 8: sct_decision_matrix.html
-spool "&&REPORT_DIR/sct_decision_matrix.html"
+-- Report 8: sct_conversion_guide.html
+spool "&&REPORT_DIR/sct_conversion_guide.html"
 
 prompt <!DOCTYPE html>
 prompt <html lang="en">
 prompt <head>
 prompt <meta charset="utf-8">
-prompt <title>SCT Decision Matrix</title>
+prompt <title>SCT Conversion Guide</title>
 prompt <style>
 prompt body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
 prompt h1, h2 { margin: 0 0 12px 0; }
@@ -1080,8 +1080,8 @@ prompt a:hover { text-decoration: underline; }
 prompt </style>
 prompt </head>
 prompt <body>
-prompt <h1>AWS SCT Decision Matrix</h1>
-prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="enterprise_prereq_gate.html">Prerequisite Gate</a> | <a href="datatype_refactor_backlog.html">Datatype Refactor Backlog</a></div>
+prompt <h1>SCT Conversion Guide</h1>
+prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="pre_migration_readiness.html">Pre-Migration Readiness</a> | <a href="datatype_mapping_backlog.html">Data Type Mapping Backlog</a></div>
 
 prompt <div class="card">
 prompt <h2>Weighted Conversion Risk</h2>
@@ -1260,14 +1260,14 @@ prompt </html>
 spool off
 
 
--- Report 9: datatype_refactor_backlog.html
-spool "&&REPORT_DIR/datatype_refactor_backlog.html"
+-- Report 9: datatype_mapping_backlog.html
+spool "&&REPORT_DIR/datatype_mapping_backlog.html"
 
 prompt <!DOCTYPE html>
 prompt <html lang="en">
 prompt <head>
 prompt <meta charset="utf-8">
-prompt <title>Datatype Refactor Backlog</title>
+prompt <title>Data Type Mapping Backlog</title>
 prompt <style>
 prompt body { font-family: Arial, sans-serif; margin: 24px; background: #f7f9fc; color: #1f2937; }
 prompt h1, h2 { margin: 0 0 12px 0; }
@@ -1284,8 +1284,8 @@ prompt a:hover { text-decoration: underline; }
 prompt </style>
 prompt </head>
 prompt <body>
-prompt <h1>Oracle to Aurora MySQL Datatype Refactor Backlog</h1>
-prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="sct_decision_matrix.html">SCT Decision Matrix</a></div>
+prompt <h1>Oracle to Aurora MySQL Data Type Mapping Backlog</h1>
+prompt <div class="nav"><a href="source_intelligence.html">Source Intelligence</a> | <a href="sct_conversion_guide.html">SCT Conversion Guide</a></div>
 
 prompt <div class="card">
 prompt <h2>Backlog Summary by Risk</h2>
@@ -1541,7 +1541,7 @@ prompt &&REPORT_DIR/discovery_objects.html
 prompt &&REPORT_DIR/dependency_graph.html
 prompt &&REPORT_DIR/schema_complexity.html
 prompt &&REPORT_DIR/aws_sct_readiness.html
-prompt &&REPORT_DIR/enterprise_prereq_gate.html
-prompt &&REPORT_DIR/sct_decision_matrix.html
-prompt &&REPORT_DIR/datatype_refactor_backlog.html
+prompt &&REPORT_DIR/pre_migration_readiness.html
+prompt &&REPORT_DIR/sct_conversion_guide.html
+prompt &&REPORT_DIR/datatype_mapping_backlog.html
 prompt
