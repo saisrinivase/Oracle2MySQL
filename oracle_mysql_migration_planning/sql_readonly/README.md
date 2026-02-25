@@ -2,6 +2,9 @@
 
 This package generates Oracle source discovery and assessment HTML reports without changing schema objects or table data.
 
+Detailed execution runbook:
+- `/Users/saiendla/Desktop/OracletoMySQL/oracle_mysql_migration_planning/sql_readonly/RUNBOOK.md`
+
 ## Safety Guarantees
 - No `CREATE`
 - No `INSERT`
