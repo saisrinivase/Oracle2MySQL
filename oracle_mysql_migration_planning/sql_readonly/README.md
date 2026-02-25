@@ -23,9 +23,11 @@ All versions are `SELECT` + `SPOOL` only.
   - Frozen baseline.
   - Do not edit.
   - Lock metadata is in `VERSION_LOCK.md`.
-- `run_source_intelligence_single_script_v2_enterprise.sql`
+- `oracle2mysql_assement.sql`
   - Enhancement track for enterprise-grade reporting.
   - Includes SCT decisioning and datatype refactor backlog outputs.
+- `run_source_intelligence_single_script_v2_enterprise.sql`
+  - Backward-compatible alias of the same v2 logic.
 
 ## Run from SQL Developer (Single Script)
 1. Open SQL Worksheet connected to source Oracle.
@@ -35,7 +37,7 @@ All versions are `SELECT` + `SPOOL` only.
 4. Run with `F5` (Run Script):
 
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql YOUR_SCHEMA /tmp/oracle_source_intel 19c 8 350 40
+@oracle2mysql_assement.sql YOUR_SCHEMA /tmp/oracle_source_intel 19c 8 350 40
 ```
 
 Wildcard schema filters are supported (example: `APP_%`).
@@ -54,7 +56,7 @@ chmod 700 /tmp/oracle_source_intel
 chmod 700 /tmp/oracle_source_intel/poc_hr
 ```
 
-If you need a different base path, update one line in `run_source_intelligence_single_script_v2_enterprise.sql`:
+If you need a different base path, update one line in `oracle2mysql_assement.sql`:
 ```sql
 define ALLOWED_REPORT_BASE='/your/approved/base/path'
 ```

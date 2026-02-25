@@ -16,7 +16,7 @@ Anyone with:
 
 ## Recommended Path
 Use the read-only single script first:
-- `oracle_mysql_migration_planning/sql_readonly/run_source_intelligence_single_script_v2_enterprise.sql`
+- `oracle_mysql_migration_planning/sql_readonly/oracle2mysql_assement.sql`
 
 Use locked baseline when you need reproducibility:
 - `oracle_mysql_migration_planning/sql_readonly/run_source_intelligence_single_script_v1_locked.sql`
@@ -34,7 +34,7 @@ Use locked baseline when you need reproducibility:
 6. Run with `F5` (Run Script):
 
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
+@oracle2mysql_assement.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
 ```
 
 7. Open generated main report:
@@ -52,12 +52,12 @@ Use locked baseline when you need reproducibility:
 Use this command format for any schema:
 
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql <schema_filter> <report_dir_under_/tmp/oracle_source_intel> <oracle_version> <vcpus> <sga_gb> <pga_limit_gb>
+@oracle2mysql_assement.sql <schema_filter> <report_dir_under_/tmp/oracle_source_intel> <oracle_version> <vcpus> <sga_gb> <pga_limit_gb>
 ```
 
 Example:
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql APP_% /tmp/oracle_source_intel/app_poc 19c 8 350 40
+@oracle2mysql_assement.sql APP_% /tmp/oracle_source_intel/app_poc 19c 8 350 40
 ```
 
 ## Security Controls in v2

@@ -11,7 +11,7 @@ Any team member can run this if they have:
 ## Pre-Checks
 1. Confirm repository location (`<repo_root>`).
 2. Confirm script exists:
-   - `<repo_root>/oracle_mysql_migration_planning/sql_readonly/run_source_intelligence_single_script_v2_enterprise.sql`
+   - `<repo_root>/oracle_mysql_migration_planning/sql_readonly/oracle2mysql_assement.sql`
 3. Confirm output base path exists or create it:
    - `/tmp/oracle_source_intel`
 4. Confirm Oracle privileges include dictionary/metadata visibility for target schema.
@@ -41,7 +41,7 @@ chmod 700 /tmp/oracle_source_intel/poc_hr
 
 5. Execute with `F5` (Run Script):
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
+@oracle2mysql_assement.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
 ```
 
 6. Validate run completion in SQL output:
@@ -59,12 +59,12 @@ chmod 700 /tmp/oracle_source_intel/poc_hr
 ## Copy-Paste Command Templates
 Use specific schema:
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
+@oracle2mysql_assement.sql HR /tmp/oracle_source_intel/poc_hr 19c 8 350 40
 ```
 
 Use wildcard schema filter:
 ```sql
-@run_source_intelligence_single_script_v2_enterprise.sql APP_% /tmp/oracle_source_intel/app_poc 19c 8 350 40
+@oracle2mysql_assement.sql APP_% /tmp/oracle_source_intel/app_poc 19c 8 350 40
 ```
 
 ## Interpretation Guide
